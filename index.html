@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Nexa CMS</title><link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main id="loginView" class="login-wrap">
+    <form id="loginForm" class="login-card">
+      <div class="brand-mark">N</div><h1>Nexa CMS</h1><p data-i18n="loginSubtitle">سجّل الدخول إلى لوحة إدارة المحتوى</p>
+      <label for="email" data-i18n="email">البريد الإلكتروني</label><input id="email" type="email" required autocomplete="username" value="admin@nexa.local">
+      <label for="password" data-i18n="password">كلمة المرور</label><input id="password" type="password" required autocomplete="current-password" value="demo123">
+      <p id="loginError" class="error" role="alert"></p><button class="primary full" type="submit" data-i18n="signIn">تسجيل الدخول</button>
+      <small data-i18n="demoNote">حساب تجريبي: admin@nexa.local / demo123</small>
+    </form>
+  </main>
+  <div id="appView" class="app hidden">
+    <aside class="sidebar"><div class="brand"><span class="brand-mark">N</span><span>Nexa <b>CMS</b></span></div>
+      <div class="nav-label" data-i18n="workspace">مساحة العمل</div>
+      <button class="nav-item active" data-page="dashboard">▦ <span data-i18n="dashboard">لوحة التحكم</span></button>
+      <button class="nav-item" data-page="content">▤ <span data-i18n="content">المحتوى</span></button>
+      <button class="nav-item" data-page="categories">▧ <span data-i18n="categories">التصنيفات</span></button>
+      <button class="nav-item" data-page="media">▧ <span data-i18n="media">الوسائط</span></button>
+      <button class="nav-item admin-only" data-page="users">♙ <span data-i18n="users">المستخدمون</span></button>
+      <button class="nav-item admin-only" data-page="settings">⚙ <span data-i18n="settings">الإعدادات</span></button>
+      <div class="sidebar-bottom"><div class="avatar" id="userAvatar">A</div><div class="user-meta"><b id="userName">Admin</b><small id="userRole">Administrator</small></div><button id="logoutBtn" class="icon-btn" title="Logout">↪</button></div>
+    </aside>
+    <section class="main-area"><header class="topbar"><div><span class="eyebrow" data-i18n="welcome">مرحباً بعودتك</span><h2 id="pageTitle">لوحة التحكم</h2></div><div class="top-actions"><span class="status-dot"></span><span id="todayLabel"></span><button id="langBtn" class="secondary">English</button></div></header>
+      <section id="pageContent" class="page-content"></section>
+      <footer>© <span id="year"></span> Nexa CMS <span data-i18n="footer">— نموذج أولي محلي</span></footer>
+    </section>
+  </div>
+  <dialog id="contentDialog"><form id="contentForm" method="dialog" class="dialog-form"><div class="dialog-head"><h3 id="dialogTitle">محتوى جديد</h3><button type="button" id="closeDialog" class="icon-btn">×</button></div><input type="hidden" id="itemId"><label for="titleAr" data-i18n="titleAr">العنوان بالعربية</label><input id="titleAr" required maxlength="120"><label for="titleEn" data-i18n="titleEn">العنوان بالإنجليزية</label><input id="titleEn" required maxlength="120"><label for="itemType" data-i18n="type">النوع</label><select id="itemType"><option value="article">مقال</option><option value="page">صفحة</option><option value="news">خبر</option></select><label for="itemCategory" data-i18n="category">التصنيف</label><input id="itemCategory" placeholder="عام / General"><label for="bodyAr" data-i18n="bodyAr">المحتوى بالعربية</label><textarea id="bodyAr" rows="4"></textarea><label for="bodyEn" data-i18n="bodyEn">المحتوى بالإنجليزية</label><textarea id="bodyEn" rows="4"></textarea><div class="dialog-actions"><button type="button" id="cancelDialog" class="secondary" data-i18n="cancel">إلغاء</button><button class="primary" type="submit" data-i18n="save">حفظ المحتوى</button></div></form></dialog>
+  <script src="js/storage.js"></script><script src="js/app.js"></script>
+</body></html>
