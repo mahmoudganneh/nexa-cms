@@ -2,6 +2,12 @@
 
 A bilingual Arabic/English CMS dashboard built with HTML, CSS and vanilla JavaScript.
 
+<img src="screenshots/Login_page.png" width="400" alt="واجهة تسجيل الدخول">
+<img src="screenshots/Dashboard_page.png" width="400" alt="واجهة لوحة التحكم">
+<img src="screenshots/Classification_page.png" width="400" alt="واجهة التصنيفات">
+<img src="screenshots/Dashboard_English.png" width="400" alt="واجهة لوحة التحكم باللغة الانجليزية">
+<img src="screenshots/Users_page.png" width="400" alt="واجهة المستخدمين">
+
 ## Run
 Open `index.html` in a modern browser. For best results, run a local static server (for example, VS Code Live Server).
 
